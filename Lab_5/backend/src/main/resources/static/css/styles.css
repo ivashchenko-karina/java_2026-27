@@ -1,0 +1,163 @@
+/* ==========================================================================
+   Глобальні налаштування стилей для Космічного Порталу
+   ========================================================================== */
+
+body {
+    /* Сучасний темний фон із легким радіальним градієнтом */
+    background: radial-gradient(circle at center, #1e2530 0%, #0f1319 100%) !important;
+    min-height: 100vh;
+    color: #f8f9fa !important;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Стилізація верхньої навігаційної панелі */
+.navbar {
+    background-color: #161b22 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   Компоненти інтерфейсу (Картки та Блоки)
+   ========================================================================== */
+
+/* Напівпрозора картка для верхнього заголовка */
+.custom-card {
+    background: rgba(22, 27, 34, 0.7) !important;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px;
+}
+
+/* Додатковий опис у верхньому блоці */
+.custom-card .text-muted {
+    color: #8b949e !important;
+}
+
+/* ==========================================================================
+   Стилізація таблиці даних (Bootstrap Override)
+   ========================================================================== */
+
+/* Основний контейнер таблиці */
+.table-responsive {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #161b22;
+}
+
+/* Базові налаштування темної таблиці */
+.table.table-dark {
+    background-color: #161b22 !important;
+    color: #c9d1d9 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Стилізація шапки таблиці */
+.table.table-dark thead.table-active {
+    --bs-table-accent-bg: #21262d !important;
+}
+
+.table.table-dark th {
+    color: #f0f6fc !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Чергування кольорів рядків (Zebra Striping) */
+.table-striped > tbody > tr:nth-of-type(odd) {
+    --bs-table-accent-bg: #1f242c !important;
+}
+
+/* Колір рядка при наведенні мишкою */
+.table-hover > tbody > tr:hover {
+    --bs-table-accent-bg: #262c36 !important;
+    color: #ffffff !important;
+}
+
+/* Внутрішні межі комірок */
+.table.table-dark td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #e6edf3;
+}
+
+/* ==========================================================================
+   Елементи контенту всередині таблиці
+   ========================================================================== */
+
+/* Акуратне підсвічування ID об'єкта */
+.text-info {
+    color: #58a6ff !important;
+}
+
+/* Стилізація тексту наукового опису планет */
+.table td p {
+    color: #8b949e !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Контейнер зображення та ефект плавного збільшення */
+.cosmic-img {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.cosmic-img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-color: #58a6ff !important;
+}
+
+/* Кнопки дій */
+.btn-sm {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   Стилізація кнопок дій (Кастомні неонові Outline ефекти)
+   ========================================================================== */
+
+/* Кнопка "Редагувати" (Синє неонове контурне підсвічування) */
+.table .btn-primary {
+    background: rgba(13, 110, 253, 0.1) !important;
+    color: #58a6ff !important;
+    border: 1px solid rgba(13, 110, 253, 0.4) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.table .btn-primary:hover {
+    background: #0d6efd !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px rgba(13, 110, 253, 0.6) !important;
+    border-color: #58a6ff !important;
+}
+
+/* Кнопка "Видалити" (Червоне неонове контурне підсвічування) */
+.table .btn-danger {
+    background: rgba(220, 53, 69, 0.1) !important;
+    color: #ff7b72 !important;
+    border: 1px solid rgba(220, 53, 69, 0.4) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.table .btn-danger:hover {
+    background: #dc3545 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 12px rgba(220, 53, 69, 0.6) !important;
+    border-color: #ff7b72 !important;
+}
+
+/* Кнопка "Додати новий об'єкт" (Зелений акцент) */
+.btn-success {
+    background: #238636 !important;
+    border: 1px solid rgba(56, 139, 60, 0.4) !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.btn-success:hover {
+    background: #2ea043 !important;
+    box-shadow: 0 0 15px rgba(46, 160, 67, 0.4) !important;
+}
